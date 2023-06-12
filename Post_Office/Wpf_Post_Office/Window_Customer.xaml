@@ -1,0 +1,44 @@
+﻿<Window x:Class="Wpf_Post_Office.Window_Customer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Post_Office"
+        mc:Ignorable="d"
+        Title="Post Office" Height="830" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Border  Grid.Column="0" Margin="0" Background="#9d0208" Width="250" BorderBrush="#9d0208" BorderThickness="1" >
+            <StackPanel>
+                <Image Width="170" Height="100" Margin="0,20,0,20" Source="Resource/Logo.png"/>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman">Home</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman">My Orders</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman">Order Info</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman">My Wallet</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman">Edit Info</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman">Exit</Button>
+
+            </StackPanel>
+
+
+
+        </Border>
+
+        <Border  Grid.Column="1" Margin="0" Background="#1b263b" Width="auto" Name="Home_Panel" HorizontalAlignment="Stretch">
+            <StackPanel>
+                <Label FontSize="70" HorizontalAlignment="Center" Margin="0,20" FontWeight="Heavy" FontFamily="Times New Roman" Foreground="Beige">The World is in your Hands</Label>
+                <Image Source="Resource/Logo.png" Height="500" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+
+        </Border>
+
+
+
+
+
+    </Grid>
+</Window>

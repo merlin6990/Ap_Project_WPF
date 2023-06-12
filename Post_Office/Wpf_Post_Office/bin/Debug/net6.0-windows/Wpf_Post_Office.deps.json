@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Wpf_Post_Office/1.0.0": {
+        "dependencies": {
+          "DataAccess": "1.0.0"
+        },
         "runtime": {
           "Wpf_Post_Office.dll": {}
+        }
+      },
+      "DataAccess/1.0.0": {
+        "runtime": {
+          "DataAccess.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Wpf_Post_Office/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

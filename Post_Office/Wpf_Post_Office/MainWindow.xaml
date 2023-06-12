@@ -5,20 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Post_Office"
         mc:Ignorable="d"
-        Title="Post Office" Height="750" Width="1200">
+        Title="Post Office" Height="830" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
-        <Border  Grid.Column="0" Margin="0" Background="#a4133c" Width="250" BorderBrush="#a4133c" BorderThickness="1" >
+        <Border  Grid.Column="0" Margin="0" Background="#9d0208" Width="250" BorderBrush="#9d0208" BorderThickness="1" >
+            <StackPanel>
+                <Image Width="170" Height="100" Margin="0,20,0,20" Source="Resource/Logo.png"/>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Home_btn" Click="Home_btn_Click">Home</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Register_Customer_btn" Click="Register_Customer_btn_Click">Register Customer</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Register_Order_btn" Click="Register_Order_btn_Click">Register Order</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Order_List_btn" Click="Order_List_btn_Click">Order List</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Order_Info_btn" Click="Order_Info_btn_Click">Order Info</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Send_Email_btn" Click="Send_Email_btn_Click">Send Email</Button>
+                <Button Margin="20,20" Height="50" Background="#14213d" BorderBrush="#780000" Foreground="White" FontSize="20" FontFamily="Times New Roman" Name="Exit_btn" Click="Exit_btn_Click">Exit</Button>
+
+            </StackPanel>
+
             
+
         </Border>
 
         <Border  Grid.Column="1" Margin="0" Background="#1b263b" Width="auto" Name="Home_Panel" HorizontalAlignment="Stretch">
+            <StackPanel>
+                <Label FontSize="70" HorizontalAlignment="Center" Margin="0,20" FontWeight="Heavy" FontFamily="Times New Roman" Foreground="Beige">The World is in your Hands</Label>
+                <Image Source="Resource/Logo.png" Height="500" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
 
         </Border>
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Customer_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+
+
+        </Border>
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Order_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+
+
+        </Border>
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_List_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+
+
+        </Border>
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+
+
+        </Border>
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Send_Email_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+
+
+        </Border>
+
 
 
 
