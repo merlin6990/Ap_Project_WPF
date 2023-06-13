@@ -1,0 +1,15 @@
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\Test_For_Wpf.exe
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\Test_For_Wpf.deps.json
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\Test_For_Wpf.runtimeconfig.json
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\Test_For_Wpf.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\Test_For_Wpf.pdb
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.csproj.AssemblyReference.cache
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.AssemblyInfoInputs.cache
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.AssemblyInfo.cs
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.csproj.CoreCompileInputs.cache
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\refint\Test_For_Wpf.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.pdb
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.genruntimeconfig.cache
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\ref\Test_For_Wpf.dll

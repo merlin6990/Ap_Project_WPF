@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    internal class Order
+    public class Order
     {
+
     }
 }
