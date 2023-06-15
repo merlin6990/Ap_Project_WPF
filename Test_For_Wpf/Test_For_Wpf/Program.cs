@@ -1,13 +1,27 @@
-﻿Random Random_Pass = new Random();
-Random Random_User = new Random();
-string Generated_Password = "";
-
-
-for (int i = 0; i < 50; i++)
+﻿
+using System;
+namespace my
 {
-    Generated_Password = ((Random_Pass.Next(0, 99999999)).ToString()).PadLeft(8, '0');
-    Console.WriteLine(Generated_Password);
-    
+    public abstract class Abs
+    {
+        int i;
+        int j;
+        public Abs(int i, int j)
+        {
+            this.i = i;
+            this.j = j;
+            Console.WriteLine(i + j);
+        }
+    }
+    public class program
+    {
+        static void Main()
+        {
+            Abs a = new Abs(2,3);
+        }
+    }
 }
+
+
 
 

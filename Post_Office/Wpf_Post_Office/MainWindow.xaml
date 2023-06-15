@@ -36,8 +36,15 @@
             </StackPanel>
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Customer_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Customer_Panel" HorizontalAlignment="Stretch" Visibility="Hidden">
+            <StackPanel >
+                <DataGrid Name="Customers_List" Margin="60,20,60,20" CanUserDeleteRows="False" IsReadOnly="True" CanUserResizeRows="True" CanUserResizeColumns="True"  AlternatingRowBackground="Orange" CanUserAddRows="False" ColumnWidth="140" HorizontalAlignment="Stretch"  SelectionChanged="Customers_List_SelectionChanged" >
 
+                </DataGrid>
+                <Button Name="Add_Customer_btn" Width="200" HorizontalAlignment="Center" Background="#70e000" Margin="100,500,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Add_Customer_btn_Click">
+                    Add Customer
+                </Button>
+            </StackPanel>
 
         </Border>
         <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Order_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">

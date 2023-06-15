@@ -12,6 +12,7 @@ namespace DataAccess.Models
         private string First_Name = "", Last_Name = "", Email = "";
         private string SSN="",Phone_Number="";
         private string User_Name="", Password="";
+        private Wallet MyWallet;
         public string _First_Name
         {
             get { return First_Name; }
@@ -69,26 +70,35 @@ namespace DataAccess.Models
                     throw new Exception("Invalid pattern for ID");
             }
         }
-        public string _Password
+/*        public string _Password
         {
             get { return Password; }
             set { Password = value; }
-        }
+        }*/
         public string _User_Name
         {
             get { return User_Name; }
             set { User_Name = value; }
         }
 
-        public Customer(string first_Name, string last_Name, string email, string ssn,string phonenum)
+        public Customer(string first_Name, string last_Name, string email, string ssn,string phonenum,string Pass=null,string User=null)
         {
             _First_Name = first_Name;
             _Last_Name = last_Name;
             _Email = email;
             _SSN = ssn;
             _Phone_Number = phonenum;
-            Generate_Set_Password_UserName();
-            Customers_Num++;
+            if ((Pass != null) && (User != null))
+            {
+                this.Password = Pass;
+                this.User_Name = User;
+            }
+            else
+            {
+                Generate_Set_Password_UserName();
+                Customers_Num++;
+            }
+            MyWallet = new Wallet();
 
         }
         public void Generate_Set_Password_UserName()

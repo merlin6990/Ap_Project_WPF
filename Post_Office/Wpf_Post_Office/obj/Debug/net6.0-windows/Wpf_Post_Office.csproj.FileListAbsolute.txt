@@ -28,3 +28,7 @@ E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Window_Si
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\DataAccess.dll
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\DataAccess.pdb
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Wpf_Post_Office.csproj.CopyComplete
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Customer_Window.g.cs
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Customer_Window.baml
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Error.g.cs
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Error.baml

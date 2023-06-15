@@ -1,0 +1,16 @@
+﻿<Window x:Class="Wpf_Post_Office.Error"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Post_Office"
+        mc:Ignorable="d"
+        Title="Error" Height="220" Width="250">
+    <Grid Background="#14213d">
+        <StackPanel>
+            <Label HorizontalAlignment="Center" Foreground="Red" FontSize="30" FontWeight="Bold">Error</Label>
+            <Label Margin="10" FontSize="15" Content="" Name="Error_Content" HorizontalAlignment="Center" Width="157"></Label>
+            <Button Margin="50" Width="30" Height="20"  Foreground="#14213d" Click="Button_Click">Ok</Button>
+        </StackPanel>
+    </Grid>
+</Window>

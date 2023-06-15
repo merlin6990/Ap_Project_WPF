@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataAccess;
+using DataAccess.Models;
 
 namespace Wpf_Post_Office
 {
@@ -24,6 +26,8 @@ namespace Wpf_Post_Office
         public MainWindow()
         {
             InitializeComponent();
+            Data_Access_Unit.Read_From_DB();
+            Customers_List.ItemsSource = Data_Access_Unit.Customer_Buffer;
         }
 
         private void Home_btn_Click(object sender, RoutedEventArgs e)
@@ -90,6 +94,19 @@ namespace Wpf_Post_Office
         private void Exit_btn_Click(object sender, RoutedEventArgs e)
         {
             //Going to The Log in Page NOT IMPLEMENTED YET
+        }
+
+        private void Customers_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Customer This = (Customer)Customers_List.SelectedItem;
+
+        }
+
+        private void Add_Customer_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Customer_Window Temp_Wind=new Add_Customer_Window();
+            Temp_Wind.ShowDialog();
+            
         }
     }
 }

@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    internal class Wallet
+    public class Wallet
     {
+        private int Balance;
+        public Wallet()
+        {
+            Balance = 0;
+        }
+        public void Add_Money(int x)
+        {
+            if (x <= 0)
+                throw new ArgumentException("The amount of money must be Positive");
+            Balance += x;
+        }
     }
 }

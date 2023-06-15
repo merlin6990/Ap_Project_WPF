@@ -1,0 +1,39 @@
+﻿<Window x:Class="Wpf_Post_Office.Add_Customer_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Post_Office"
+        mc:Ignorable="d"
+        Title="Add_Customer_Window" Height="600" Width="800">
+    <Grid Background="#14213d">
+        <StackPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">First Name </Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="First_Name_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Last Name</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Last_Name_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">SSN</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="SSN_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Email</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Email_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Phone Number</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Phone_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel VerticalAlignment="Bottom">
+                <Image Source="Resource/Logo.png" Width="170" Height="100" Margin="20"></Image>
+                <Button Margin="100,20,50,20" Width="100" Height="50" HorizontalAlignment="Center" Background="#9d0208" BorderBrush="#9d0208" Foreground="#14213d" Click="Button_Click">Cancel</Button>
+                <Button Margin="100,20,50,20" Width="100" Height="50" Background="#70e000" BorderBrush="#70e000" Foreground="#14213d" Click="Button_Click_1">Add</Button>
+            </DockPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

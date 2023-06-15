@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\App.xaml
-4-1414816622
+6-1598186928
 
-8-223662431
+10-1613276196
 195-1633261148
-MainWindow.xaml;Window_Customer.xaml;Window_Log_In.xaml;Window_Sign_Up.xaml;
+Add_Customer_Window.xaml;Error.xaml;MainWindow.xaml;Window_Customer.xaml;Window_Log_In.xaml;Window_Sign_Up.xaml;
 
 True
 
