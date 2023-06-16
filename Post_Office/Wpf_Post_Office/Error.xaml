@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Post_Office"
         mc:Ignorable="d"
-        Title="Error" Height="220" Width="250">
+        Title="Error" Height="220" Width="350">
     <Grid Background="#14213d">
         <StackPanel>
             <Label HorizontalAlignment="Center" Foreground="Red" FontSize="30" FontWeight="Bold">Error</Label>
-            <Label Margin="10" FontSize="15" Content="" Name="Error_Content" HorizontalAlignment="Center" Width="157"></Label>
+            <Label Margin="10" FontSize="15" Content="" Name="Error_Content" HorizontalAlignment="Center" Width="200" Foreground="Red"></Label>
             <Button Margin="50" Width="30" Height="20"  Foreground="#14213d" Click="Button_Click">Ok</Button>
         </StackPanel>
     </Grid>

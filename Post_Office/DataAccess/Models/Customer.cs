@@ -45,7 +45,7 @@ namespace DataAccess.Models
                 if (Validity.Email_Isvalid(value))
                     Email = value;
                 else
-                    throw new Exception("Invalid pattern for email");
+                    throw new Exception("Invalid pattern for Email");
             }
         }
         public string _SSN
@@ -56,7 +56,7 @@ namespace DataAccess.Models
                 if (Validity.SSN_Isvalid(value))
                     SSN = value;
                 else
-                    throw new Exception("Invalid pattern for ID");
+                    throw new Exception("Invalid pattern for SSN");
             }
         }
         public string _Phone_Number
@@ -67,7 +67,7 @@ namespace DataAccess.Models
                 if (Validity.Phone_Number_Isvalid(value))
                     Phone_Number = value;
                 else
-                    throw new Exception("Invalid pattern for ID");
+                    throw new Exception("Invalid pattern for Phone Number");
             }
         }
 /*        public string _Password
