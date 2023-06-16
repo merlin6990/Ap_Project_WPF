@@ -1,0 +1,67 @@
+﻿<Window x:Class="Wpf_Post_Office.Add_Order_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Post_Office"
+        mc:Ignorable="d"
+        Title="Add_Order_Window" Height="900" Width="800">
+    <Grid Background="#14213d">
+        <StackPanel>
+            <Image Source="Resource/Logo.png" Width="170" Height="150" Margin="20"></Image>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">* Sender Address</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Sender_Address_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">* Receiver Address</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Receiver_Address_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">* Box Type</Label>
+                <ComboBox Name="Box_Type_Cbox"   Width="500" HorizontalAlignment="Right" Height="20" Margin="0,0,20,0">
+                    <ComboBoxItem Background="Orange" Content="Object"></ComboBoxItem>
+                    <ComboBoxItem Background="Orange" Content="Document"></ComboBoxItem>
+                    <ComboBoxItem Background="Orange" Content="Fragile"></ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Expensive Item</Label>
+                <CheckBox Name="IS_Expensive_Checkbox" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="120,0,0,0" />
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">* Box Weight (kg)</Label>
+                <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Box_Weight_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">* Post Type</Label>
+                <ComboBox Name="Post_Type_Cbox"   Width="500" HorizontalAlignment="Right" Height="20" Margin="0,0,20,0">
+                    <ComboBoxItem Background="Orange" Content="Normal"></ComboBoxItem>
+                    <ComboBoxItem Background="Orange" Content="Premium"></ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Phone Number</Label>
+                <TextBox  Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Phone_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+            </DockPanel>
+            <DockPanel VerticalAlignment="Bottom">
+
+                <Button Margin="100,20,50,20" Width="200" Height="50" HorizontalAlignment="Left" Background="ForestGreen" BorderBrush="Green" Foreground="#14213d" Click="Button_Click">Calculate Price</Button>
+                <StackPanel Visibility="Hidden" Margin="15" Name="Register_Stack_Panel">
+                    <DockPanel>
+                        <Label Content="Total Price :" Foreground="White" FontSize="20" FontWeight="Bold" ></Label>
+                        <Label HorizontalAlignment="Left" Width="200" Content="" Name="Price_Tag" Foreground="Green" FontSize="13" Height="26"/>
+                    </DockPanel>
+                    <DockPanel Margin="20">
+                        <Button Margin="0" Width="100" Height="50" HorizontalAlignment="Left" Background="Red" BorderBrush="MediumVioletRed" Foreground="#14213d" Click="Button_Click_1">Cancel</Button>
+                        <Button Margin="100,0,0,0" Width="100" Height="50" HorizontalAlignment="Left" Background="ForestGreen" BorderBrush="Green" Foreground="#14213d" Click="Button_Click_2">Register Order</Button>
+                    </DockPanel>
+
+                </StackPanel>
+
+            </DockPanel>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

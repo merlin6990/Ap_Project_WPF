@@ -47,8 +47,19 @@
             </StackPanel>
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Order_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
-
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Order_Panel" HorizontalAlignment="Stretch" Visibility="Visible">
+            <StackPanel >
+                <DockPanel>
+                    <Label Foreground="White" Margin="20,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center">Customer ID</Label>
+                    
+                    <TextBox Name="Search_Box_ID" Width="500" Height="25" Margin="100,100,100,80" VerticalAlignment="Center" FontSize="15" Background="#780000" BorderBrush="#780000" Foreground="White"></TextBox>
+                </DockPanel>
+                <Label Name="Not_Found_Label" HorizontalAlignment="Center" Foreground="Red" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Visibility="Hidden">Not Found!!!</Label>
+                
+                <Button Name="Add_Order_btn" Width="200" VerticalAlignment="Center" Background="Orange" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Add_Order_btn_Click">
+                    Search
+                </Button>
+            </StackPanel>
 
         </Border>
         <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_List_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">

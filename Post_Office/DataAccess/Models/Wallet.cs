@@ -19,5 +19,10 @@ namespace DataAccess.Models
                 throw new ArgumentException("The amount of money must be Positive");
             Balance += x;
         }
+        public int Get_Balance()
+        {
+            return Balance;
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace DataAccess.Models
 {
     public class Customer
     {
+        private ObservableCollection<Order> My_Orders = new ObservableCollection<Order>();
         private static int Customers_Num = 0;
         private string First_Name = "", Last_Name = "", Email = "";
         private string SSN="",Phone_Number="";
@@ -116,6 +118,14 @@ namespace DataAccess.Models
 
             this.Password = Generated_Password;
             this.User_Name = Generated_UserName;
+        }
+        public void Add_New_Order_To_My_Orders(Order x)
+        {
+            My_Orders.Add(x);
+        }
+        public double Get_My_Blance()
+        {
+            return MyWallet.Get_Balance();
         }
     }
 }

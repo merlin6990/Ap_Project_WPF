@@ -19,6 +19,7 @@ namespace DataAccess.Models
     }
     public class Order
     {
+        private string Additional_Phone_Num;
         private string Customer_SSN;
         private string Sender_Address, Receiver_Address;
         public Box_Content MyBox;
@@ -44,7 +45,7 @@ namespace DataAccess.Models
             get { return Receiver_Address; }
             set { Receiver_Address = value; }
         }
-        public Order(string SSN,string sender,string receiver,Box_Content x,bool isexpensive,double weight,Post_Type type)
+        public Order(string SSN,string sender,string receiver,Box_Content x,bool isexpensive,double weight,Post_Type type, string Phone_Num = "")
         {
             if (weight <= 0)
                 throw new ArgumentException("Weight of the box cannot be Negative or 0");
@@ -57,6 +58,31 @@ namespace DataAccess.Models
             Type = type;
             ID= ID_num+1;
             ID_num++;
+            if (Phone_Num != "")
+                Additional_Phone_Num = Phone_Num;
+
+        }
+        public static double Calculate_Price(Box_Content x, bool isexpensive, double weight, Post_Type type)
+        {
+            double Base_Price = 10;
+
+            if (x == Box_Content.Object)
+                Base_Price *= 1;
+            else if (x == Box_Content.Document)
+                Base_Price *= 1.5;
+            else
+                Base_Price *= 2;
+            if (isexpensive)
+                Base_Price *= 2;
+            if(weight > 0.5)
+            {
+                double Diff = weight - 0.5;
+                int Coefficient =(int)(Diff / 0.5);
+                Base_Price *=Math.Pow(1.2,Coefficient);
+            }
+            if (type == Post_Type.Premium)
+                Base_Price *= 2;
+            return Base_Price;
         }
     }
 }

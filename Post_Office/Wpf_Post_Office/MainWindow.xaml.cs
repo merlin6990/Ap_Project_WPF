@@ -108,5 +108,24 @@ namespace Wpf_Post_Office
             Temp_Wind.ShowDialog();
             
         }
+
+        private void Add_Order_btn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var Searched_Customer=Data_Access_Unit.Search_Customer_ID(Search_Box_ID.Text);
+                Not_Found_Label.Visibility = Visibility.Hidden;
+                Add_Order_Window Temp_Wind = new Add_Order_Window(Searched_Customer);
+                Temp_Wind.ShowDialog();
+
+            }
+            catch(Exception This)
+            {
+                //MessageBox.Show(This.Message);
+                Not_Found_Label.Visibility = Visibility.Visible;
+
+            }
+
+        }
     }
 }

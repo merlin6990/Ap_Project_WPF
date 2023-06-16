@@ -32,3 +32,5 @@ E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Custo
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Customer_Window.baml
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Error.g.cs
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Error.baml
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Order_Window.g.cs
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Order_Window.baml
