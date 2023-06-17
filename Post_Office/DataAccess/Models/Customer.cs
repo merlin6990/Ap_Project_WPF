@@ -127,5 +127,9 @@ namespace DataAccess.Models
         {
             return MyWallet.Get_Balance();
         }
+        public void Withdraw_Money(int x)
+        {
+            MyWallet.Withdraw(x);
+        }
     }
 }

@@ -69,6 +69,7 @@ namespace Wpf_Post_Office
                 Post_Type This_Order_Post_Type = (Post_Type)Post_Type_Cbox.SelectedIndex;
                 int Price = (int)Order.Calculate_Price(This_Order_Type, IsExpensive, Weight, This_Order_Post_Type);
                 Data_Access_Unit.Add_New_Order(This_Customer._SSN, Sender_Address_Block.Text, Receiver_Address_Block.Text, This_Order_Type, IsExpensive, Weight, This_Order_Post_Type);
+                this.Close();
             }
             catch(Exception This)
             {

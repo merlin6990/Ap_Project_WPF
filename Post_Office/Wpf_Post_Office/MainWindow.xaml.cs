@@ -127,5 +127,45 @@ namespace Wpf_Post_Office
             }
 
         }
+
+        private void Use_SSN_Click(object sender, RoutedEventArgs e)
+        {
+            if (Dummy_Box1.Visibility == Visibility.Visible)
+                Dummy_Box1.Visibility = Visibility.Hidden;
+            else
+                Dummy_Box1.Visibility = Visibility.Visible;
+        }
+
+        private void Use_Box_Type_Click(object sender, RoutedEventArgs e)
+        {
+            if (Dummy_Box2.Visibility == Visibility.Visible)
+                Dummy_Box2.Visibility = Visibility.Hidden;
+            else
+                Dummy_Box2.Visibility = Visibility.Visible;
+        }
+
+        private void Use_Price_Click(object sender, RoutedEventArgs e)
+        {
+            if (Dummy_Box3.Visibility == Visibility.Visible)
+                Dummy_Box3.Visibility = Visibility.Hidden;
+            else
+                Dummy_Box3.Visibility = Visibility.Visible;
+        }
+
+        private void Use_Weight_Click(object sender, RoutedEventArgs e)
+        {
+            if (Dummy_Box4.Visibility == Visibility.Visible)
+                Dummy_Box4.Visibility = Visibility.Hidden;
+            else
+                Dummy_Box4.Visibility = Visibility.Visible;
+        }
+
+        private void Use_Post_Type_Click(object sender, RoutedEventArgs e)
+        {
+            if (Dummy_Box5.Visibility == Visibility.Visible)
+                Dummy_Box5.Visibility = Visibility.Hidden;
+            else
+                Dummy_Box5.Visibility = Visibility.Visible;
+        }
     }
 }

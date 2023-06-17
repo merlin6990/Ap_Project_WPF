@@ -31,7 +31,10 @@ namespace DataAccess
             if (customer.Get_My_Blance() < price)
                 throw new Exception("Customer doesn't have enough Balance");
             Order New_Order = new Order(SSN, sender, receiver, x, isexpensive, weight, type,Phone_Num);
+            New_Order.This_Order_Price = price;
             customer.Add_New_Order_To_My_Orders(New_Order);
+            customer.Withdraw_Money(price);
+            Order_Buffer.Add(New_Order);
             
         }
         public static Customer Search_Customer_ID(string SSN)
@@ -41,6 +44,32 @@ namespace DataAccess
                 throw new Exception();
             else
                 return Customer;
+        }
+
+        //A function That outputs a list of Orders with required parameters
+        public static List<Order> Filtered_Orders(bool Use_SSN, bool Use_Content, bool Use_Price, bool Use_Weight, bool Use_Post_Type, string SSN="",Box_Content Content=Box_Content.Object,int Price=0,double Weight=0,Post_Type Post_type=Post_Type.Normal )
+        {
+            if (Order_Buffer.Count == 0)
+                throw new Exception("No order is registered yet");
+            var Filtered_orders = new List<Order>();
+            var Orders = Order_Buffer.ToList();
+            if (Use_SSN)
+                Orders = Orders.Where(x => x.SSN == SSN).ToList();
+            if(Use_Content)
+                Orders = Orders.Where(x => x.MyBox==Content).ToList();
+            if(Use_Price)
+                Orders = Orders.Where(x => x.This_Order_Price>=Price).ToList();
+            if(Use_Weight)
+                Orders = Orders.Where(x => x.Box_Weight >= Weight).ToList();
+            if(Use_Post_Type)
+                Orders = Orders.Where(x => x.Type == Post_type).ToList();
+
+            Filtered_orders = Orders;
+
+
+
+
+            return Filtered_orders;
         }
     }
 }

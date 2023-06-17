@@ -19,6 +19,7 @@ namespace DataAccess.Models
     }
     public class Order
     {
+        public int This_Order_Price;
         private string Additional_Phone_Num;
         private string Customer_SSN;
         private string Sender_Address, Receiver_Address;
@@ -82,6 +83,7 @@ namespace DataAccess.Models
             }
             if (type == Post_Type.Premium)
                 Base_Price *= 2;
+            
             return Base_Price;
         }
     }

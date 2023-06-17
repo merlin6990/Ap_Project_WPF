@@ -29,14 +29,14 @@
 
         </Border>
 
-        <Border  Grid.Column="1" Margin="0" Background="#1b263b" Width="auto" Name="Home_Panel" HorizontalAlignment="Stretch">
+        <Border  Grid.Column="1" Visibility="Visible" Margin="0" Background="#1b263b" Width="auto" Name="Home_Panel" HorizontalAlignment="Stretch">
             <StackPanel>
                 <Label FontSize="70" HorizontalAlignment="Center" Margin="0,20" FontWeight="Heavy" FontFamily="Times New Roman" Foreground="Beige">The World is in your Hands</Label>
                 <Image Source="Resource/Logo2.png" Height="500" HorizontalAlignment="Center" Margin="0,20,0,0"/>
             </StackPanel>
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Customer_Panel" HorizontalAlignment="Stretch" Visibility="Hidden">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Customer_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
             <StackPanel >
                 <DataGrid Name="Customers_List" Margin="60,20,60,20" CanUserDeleteRows="False" IsReadOnly="True" CanUserResizeRows="True" CanUserResizeColumns="True"  AlternatingRowBackground="Orange" CanUserAddRows="False" ColumnWidth="140" HorizontalAlignment="Stretch"  SelectionChanged="Customers_List_SelectionChanged" >
 
@@ -47,7 +47,7 @@
             </StackPanel>
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Order_Panel" HorizontalAlignment="Stretch" Visibility="Visible">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Register_Order_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
             <StackPanel >
                 <DockPanel>
                     <Label Foreground="White" Margin="20,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center">Customer ID</Label>
@@ -62,7 +62,35 @@
             </StackPanel>
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_List_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_List_Panel" HorizontalAlignment="Stretch" Visibility="Visible">
+            <StackPanel>
+                <Label HorizontalAlignment="Center" FontSize="50" Foreground="White" FontWeight="Bold" Margin="0,0,20,0">Advanced Search</Label>
+                <DockPanel Height="auto" Margin="50,0,50,0">
+                    <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Customer SSN :</Label>
+                    <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_SSN" Click="Use_SSN_Click"></CheckBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box1"></TextBox>
+                </DockPanel>
+                <DockPanel Height="auto" Margin="50,0,50,0">
+                    <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Box Type :</Label>
+                    <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Box_Type" Click="Use_Box_Type_Click"></CheckBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box2"></TextBox>
+                </DockPanel>
+                <DockPanel Height="auto" Margin="50,0,50,0">
+                    <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Order Price:</Label>
+                    <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Price" Click="Use_Price_Click"></CheckBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box3"></TextBox>
+                </DockPanel>
+                <DockPanel Height="auto" Margin="50,0,50,0">
+                    <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Box Weight :</Label>
+                    <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Weight" Click="Use_Weight_Click"></CheckBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box4"></TextBox>
+                </DockPanel>
+                <DockPanel Height="auto" Margin="50,0,50,0">
+                    <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Post Type :</Label>
+                    <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Post_Type" Click="Use_Post_Type_Click"></CheckBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box5"></TextBox>
+                </DockPanel>
+            </StackPanel>
 
 
         </Border>

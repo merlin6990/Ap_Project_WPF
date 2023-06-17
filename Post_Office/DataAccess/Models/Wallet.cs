@@ -11,7 +11,7 @@ namespace DataAccess.Models
         private int Balance;
         public Wallet()
         {
-            Balance = 0;
+            Balance = 500;
         }
         public void Add_Money(int x)
         {
@@ -23,6 +23,9 @@ namespace DataAccess.Models
         {
             return Balance;
         }
-
+        public void Withdraw(int x)
+        {
+            Balance -= x;
+        }
     }
 }
