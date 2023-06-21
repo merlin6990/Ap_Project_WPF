@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using DataAccess.Models;
 
 namespace DataAccess
@@ -68,6 +69,16 @@ namespace DataAccess
 
 
 
+
+            return Filtered_orders;
+        }
+        public static List<Order> Display_My_Orders(string SSN)
+        {
+            var Filtered_orders = new List<Order>();
+            foreach (var i in Order_Buffer)
+            {
+                if (i.SSN == SSN) Filtered_orders.Add(i);
+            }
 
             return Filtered_orders;
         }
