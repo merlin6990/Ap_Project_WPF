@@ -72,6 +72,14 @@ namespace DataAccess
 
             return Filtered_orders;
         }
+        public static Order Show_Status(int ID)
+        {
+            var this_Order = Order_Buffer.First(x => x._ID == ID);
+            if (this_Order == null)
+                throw new Exception("Nothing found");
+            else
+                return this_Order;
+        }
         public static List<Order> Display_My_Orders(string SSN)
         {
             var Filtered_orders = new List<Order>();

@@ -224,7 +224,7 @@ namespace Wpf_Post_Office
         {
             try
             {
-                var Info=Data_Access_Unit.Show_Status(int.Parse(Search_Box_ID2.Text));
+                var Info = Data_Access_Unit.Show_Status(int.Parse(Search_Box_ID2.Text));
                 var Info_List = new List<Order>();
                 Info_List.Add(Info);
                 Not_Found_Label2.Visibility = Visibility.Hidden;
