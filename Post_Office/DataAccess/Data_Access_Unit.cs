@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using DataAccess.Models;
 
 namespace DataAccess
@@ -71,14 +72,15 @@ namespace DataAccess
 
             return Filtered_orders;
         }
-        public static Order Show_Status(int ID)
+        public static List<Order> Display_My_Orders(string SSN)
         {
-            var Order = Order_Buffer.First(x => x._ID == ID);
-            if (Order == null)
-                throw new Exception("No order with such id Exists");
+            var Filtered_orders = new List<Order>();
+            foreach (var i in Order_Buffer)
+            {
+                if (i.SSN == SSN) Filtered_orders.Add(i);
+            }
 
-            return Order;
-
+            return Filtered_orders;
         }
     }
 }
