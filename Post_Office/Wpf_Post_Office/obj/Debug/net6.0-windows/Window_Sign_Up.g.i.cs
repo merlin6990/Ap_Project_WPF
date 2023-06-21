@@ -53,7 +53,7 @@ namespace Wpf_Post_Office {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Wpf_Post_Office;V1.0.0.0;component/window_sign_up.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Wpf_Post_Office;component/window_sign_up.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Window_Sign_Up.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
