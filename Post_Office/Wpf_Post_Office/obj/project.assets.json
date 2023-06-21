@@ -27,23 +27,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Ap_Project_WPF\\Post_Office\\Wpf_Post_Office\\Wpf_Post_Office.csproj",
+      "projectUniqueName": "D:\\university\\Ap_Project_WPF\\Post_Office\\Wpf_Post_Office\\Wpf_Post_Office.csproj",
       "projectName": "Wpf_Post_Office",
-      "projectPath": "E:\\Ap_Project_WPF\\Post_Office\\Wpf_Post_Office\\Wpf_Post_Office.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "E:\\Ap_Project_WPF\\Post_Office\\Wpf_Post_Office\\obj\\",
+      "projectPath": "D:\\university\\Ap_Project_WPF\\Post_Office\\Wpf_Post_Office\\Wpf_Post_Office.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\university\\Ap_Project_WPF\\Post_Office\\Wpf_Post_Office\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -53,8 +58,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "E:\\Ap_Project_WPF\\Post_Office\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "E:\\Ap_Project_WPF\\Post_Office\\DataAccess\\DataAccess.csproj"
+            "D:\\university\\Ap_Project_WPF\\Post_Office\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\university\\Ap_Project_WPF\\Post_Office\\DataAccess\\DataAccess.csproj"
             }
           }
         }

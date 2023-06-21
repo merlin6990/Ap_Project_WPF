@@ -53,7 +53,7 @@ namespace Wpf_Post_Office {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Wpf_Post_Office;component/window_log_in.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Wpf_Post_Office;V1.0.0.0;component/window_log_in.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Window_Log_In.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
