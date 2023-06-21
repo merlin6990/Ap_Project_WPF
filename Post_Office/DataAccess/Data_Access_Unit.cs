@@ -71,5 +71,14 @@ namespace DataAccess
 
             return Filtered_orders;
         }
+        public static Order Show_Status(int ID)
+        {
+            var Order = Order_Buffer.First(x => x._ID == ID);
+            if (Order == null)
+                throw new Exception("No order with such id Exists");
+
+            return Order;
+
+        }
     }
 }

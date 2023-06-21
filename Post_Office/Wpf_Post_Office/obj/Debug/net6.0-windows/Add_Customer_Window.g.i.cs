@@ -93,7 +93,7 @@ namespace Wpf_Post_Office {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Wpf_Post_Office;component/add_customer_window.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Wpf_Post_Office;V1.0.0.0;component/add_customer_window.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Add_Customer_Window.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

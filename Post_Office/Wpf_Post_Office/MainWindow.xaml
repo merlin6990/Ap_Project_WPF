@@ -59,43 +59,80 @@
                 <Button Name="Add_Order_btn" Width="200" VerticalAlignment="Center" Background="Orange" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Add_Order_btn_Click">
                     Search
                 </Button>
+
             </StackPanel>
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_List_Panel" HorizontalAlignment="Stretch" Visibility="Visible">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_List_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
             <StackPanel>
                 <Label HorizontalAlignment="Center" FontSize="50" Foreground="White" FontWeight="Bold" Margin="0,0,20,0">Advanced Search</Label>
                 <DockPanel Height="auto" Margin="50,0,50,0">
                     <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Customer SSN :</Label>
                     <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_SSN" Click="Use_SSN_Click"></CheckBox>
-                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box1"></TextBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box1" Foreground="White" FontWeight="Bold"></TextBox>
                 </DockPanel>
                 <DockPanel Height="auto" Margin="50,0,50,0">
                     <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Box Type :</Label>
                     <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Box_Type" Click="Use_Box_Type_Click"></CheckBox>
-                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box2"></TextBox>
+                    <ComboBox Name="Dummy_Box2" Visibility="Hidden"   Width="200" HorizontalAlignment="Right" Height="20" Margin="0,0,12,0">
+                        <ComboBoxItem Background="Orange" Content="Object"></ComboBoxItem>
+                        <ComboBoxItem Background="Orange" Content="Document"></ComboBoxItem>
+                        <ComboBoxItem Background="Orange" Content="Fragile"></ComboBoxItem>
+                    </ComboBox>
                 </DockPanel>
                 <DockPanel Height="auto" Margin="50,0,50,0">
                     <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Order Price:</Label>
                     <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Price" Click="Use_Price_Click"></CheckBox>
-                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box3"></TextBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box3" Foreground="White" FontWeight="Bold"></TextBox>
                 </DockPanel>
                 <DockPanel Height="auto" Margin="50,0,50,0">
                     <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Box Weight :</Label>
                     <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Weight" Click="Use_Weight_Click"></CheckBox>
-                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box4"></TextBox>
+                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box4" Foreground="White" FontWeight="Bold"></TextBox>
                 </DockPanel>
                 <DockPanel Height="auto" Margin="50,0,50,0">
                     <Label VerticalAlignment="Center" Foreground="White" FontSize="15">Post Type :</Label>
                     <CheckBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Name="Use_Post_Type" Click="Use_Post_Type_Click"></CheckBox>
-                    <TextBox Width="200" HorizontalAlignment="Right" Margin="0,12,12,10" Background="#780000" Visibility="Hidden" Name="Dummy_Box5"></TextBox>
+                    <ComboBox Name="Dummy_Box5" Visibility="Hidden"   Width="200" HorizontalAlignment="Right" Height="20" Margin="0,0,12,0">
+                        <ComboBoxItem Background="Orange" Content="Normal"></ComboBoxItem>
+                        <ComboBoxItem Background="Orange" Content="Premium"></ComboBoxItem>
+                    </ComboBox>
                 </DockPanel>
+                <Button Name="Advanced_Search_btn" Width="200" VerticalAlignment="Center" Background="Orange" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Advanced_Search_btn_Click">
+                    Search
+                </Button>
+                <DataGrid Name="Search_Result" Margin="60,20,60,20" CanUserDeleteRows="False" IsReadOnly="True" CanUserResizeRows="True" CanUserResizeColumns="True"  AlternatingRowBackground="Orange" CanUserAddRows="False" ColumnWidth="140" HorizontalAlignment="Stretch" Visibility="Hidden">
+
+                </DataGrid>
             </StackPanel>
 
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch" Visibility="Visible">
+            <StackPanel >
+                <DockPanel>
+                    <Label Foreground="White" Margin="20,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center">Order ID</Label>
 
+                    <TextBox Name="Search_Box_ID2" Width="500" Height="25" Margin="100,100,100,80" VerticalAlignment="Center" FontSize="15" Background="#780000" BorderBrush="#780000" Foreground="White"></TextBox>
+                </DockPanel>
+                <Label Name="Not_Found_Label2" HorizontalAlignment="Center" Foreground="Red" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Visibility="Hidden">Not Found!!!</Label>
+
+                <Button Name="See_Order_btn" Width="200" VerticalAlignment="Center" Background="Orange" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="See_Order_btn_Click">
+                    Search
+                </Button>
+                <DataGrid Name="Order_Info" Margin="60,20,60,20" CanUserDeleteRows="False" IsReadOnly="True" CanUserResizeRows="True" CanUserResizeColumns="True"  AlternatingRowBackground="Orange" CanUserAddRows="False" ColumnWidth="140" HorizontalAlignment="Stretch" Visibility="Hidden">
+
+                </DataGrid>
+                <DockPanel >
+                    <Button Name="Clear_Page_btn" Width="200" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Orange" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Clear_Page_btn_Click">
+                        Clear
+                    </Button>
+                    <Button Name="Options_Page_btn" Width="200" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#70e000" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Options_Page_btn_Click">
+                        Options
+                    </Button>
+                </DockPanel>
+
+            </StackPanel>
 
         </Border>
         <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Send_Email_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">

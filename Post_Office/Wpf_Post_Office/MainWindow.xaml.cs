@@ -167,5 +167,86 @@ namespace Wpf_Post_Office
             else
                 Dummy_Box5.Visibility = Visibility.Visible;
         }
+
+        private void Advanced_Search_btn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string SSN = "";
+                Box_Content Content = Box_Content.Object;
+                int Price = 0;
+                double Weight = 0;
+                Post_Type Type = Post_Type.Normal;
+                if ((bool)Use_SSN.IsChecked)
+                {
+                    if (Dummy_Box1.Text == "")
+                        throw new Exception("When a parameter is checked the content cannot be empty");
+                    SSN = Dummy_Box1.Text;
+                }
+                if ((bool)Use_Box_Type.IsChecked)
+                {
+                    if (Dummy_Box2.SelectedIndex == -1)
+                        throw new Exception("When a parameter is checked the content cannot be empty");
+                    Content = (Box_Content)Dummy_Box2.SelectedIndex;
+                }
+                if ((bool)Use_Price.IsChecked)
+                {
+                    if (int.Parse(Dummy_Box3.Text) <= 0)
+                        throw new Exception("Price cannot be zero or negative");
+                    Price = int.Parse(Dummy_Box3.Text);
+                }
+                if ((bool)Use_Weight.IsChecked)
+                {
+                    if (double.Parse(Dummy_Box3.Text) <= 0)
+                        throw new Exception("Weight cannot be zero or negative");
+                    Weight = double.Parse(Dummy_Box3.Text);
+                }
+                if ((bool)Use_Post_Type.IsChecked)
+                {
+                    if (Dummy_Box5.SelectedIndex == -1)
+                        throw new Exception("When a parameter is checked the content cannot be empty");
+                    Type = (Post_Type)Dummy_Box5.SelectedIndex;
+                }
+
+                var Result = Data_Access_Unit.Filtered_Orders((bool)Use_SSN.IsChecked, (bool)Use_Box_Type.IsChecked, (bool)Use_Price.IsChecked, (bool)Use_Weight.IsChecked, (bool)Use_Post_Type.IsChecked, SSN, Content, Price, Weight, Type);
+
+                Search_Result.ItemsSource = Result;
+                Search_Result.Visibility = Visibility.Visible;
+            }
+            catch(Exception This)
+            {
+                Error Temp_Error_Wind = new Error(This.Message);
+                Temp_Error_Wind.ShowDialog();
+            }
+        }
+
+        private void See_Order_btn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var Info=Data_Access_Unit.Show_Status(int.Parse(Search_Box_ID2.Text));
+                var Info_List = new List<Order>();
+                Info_List.Add(Info);
+                Not_Found_Label2.Visibility = Visibility.Hidden;
+                Order_Info.ItemsSource = Info_List;
+                Order_Info.Visibility = Visibility.Visible;
+
+            }
+            catch(Exception This)
+            {
+                Not_Found_Label2.Visibility = Visibility.Visible;
+                Order_Info.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void Clear_Page_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Options_Page_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

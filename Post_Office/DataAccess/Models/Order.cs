@@ -46,6 +46,22 @@ namespace DataAccess.Models
             get { return Receiver_Address; }
             set { Receiver_Address = value; }
         }
+        public Post_Type Post_type
+        {
+            get { return Type; }
+        }
+        public Box_Content Content
+        {
+            get { return MyBox; }
+        }
+        public int Price
+        {
+            get { return This_Order_Price; }
+        }
+        public double Weight
+        {
+            get { return Box_Weight; }
+        }
         public Order(string SSN,string sender,string receiver,Box_Content x,bool isexpensive,double weight,Post_Type type, string Phone_Num = "")
         {
             if (weight <= 0)
