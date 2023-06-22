@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Post_Office"
         mc:Ignorable="d"
-        Title="Post Office" Height="830" Width="1200">
-    <Grid>
+        Title="Log In" Height="830" Width="1200">
+    <Grid Background="#14213d">
+        <StackPanel>
+            <Image Source="Resource/Logo2.png" Width="250" Height="250" Margin="20"></Image>
+            <Border Height="400" Width="500" Background="#780000">
+                <StackPanel>
+                    <Label HorizontalAlignment="Center" Margin="22" FontSize="25" FontWeight="Bold" Foreground="White" Width="94">Log  In</Label>
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White" Width="94">User Name</Label>
+                        <TextBox Name="User_Name_Textbx" Height="35" Width="200" Foreground="Black" FontSize="15" FontWeight="Bold"></TextBox>
+                    </DockPanel>
+                    <DockPanel>
+                        <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White" Width="94">Password</Label>
+                        <TextBox Name="Password_Textbx" Height="35" Width="200" Foreground="Black" FontSize="15" FontWeight="Bold"></TextBox>
+                    </DockPanel>
+                    <DockPanel Margin="0,50,0,0">
+                        <Button Name="Log_In_btn" Width="150" Height="50" Foreground="Black" FontWeight="Heavy" FontSize="15" Background="Green" Click="Log_In_btn_Click" >Log In</Button>
+                        
+                    </DockPanel>
+                    <Button Margin="0,20" Name="Sign_Up_Link" Width="100" Height="35" Foreground="Black" FontWeight="Heavy" FontSize="15" Background="Orange" Click="Sign_Up_Link_Click">Sign Up</Button>
+
+                </StackPanel>
+                
+            </Border>
+        </StackPanel>
         
     </Grid>
 </Window>

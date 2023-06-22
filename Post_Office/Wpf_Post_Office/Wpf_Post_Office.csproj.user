@@ -16,6 +16,9 @@
     <Compile Update="Error.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Status_Comment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Window_Customer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Status_Comment.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Window_Customer.xaml">

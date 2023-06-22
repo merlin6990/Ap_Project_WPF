@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
+    public enum Status
+    {
+        Registered=0,
+        Ready_To_Ship,
+        Shipped,
+        Received
+    }
     public enum Box_Content
     {
         Object=0,
@@ -19,6 +26,16 @@ namespace DataAccess.Models
     }
     public class Order
     {
+        private Status This_Order_Status = Status.Registered;
+        public string Customer_Comment="";
+        public Status _Status
+        {
+            get { return This_Order_Status; }
+            set
+            {
+                    This_Order_Status = value;
+            }
+        }
         public int This_Order_Price;
         private string Additional_Phone_Num;
         private string Customer_SSN;
@@ -101,6 +118,13 @@ namespace DataAccess.Models
                 Base_Price *= 2;
             
             return Base_Price;
+        }
+        public void Set_Status(Status New_Status)
+        {
+            if (This_Order_Status == Status.Received)
+                throw new Exception("You cannot change the status of the order which has already been shipped");
+            else
+                This_Order_Status = New_Status;
         }
     }
 }

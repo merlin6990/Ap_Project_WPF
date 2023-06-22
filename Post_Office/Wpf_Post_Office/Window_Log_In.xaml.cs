@@ -23,5 +23,15 @@ namespace Wpf_Post_Office
         {
             InitializeComponent();
         }
+
+        private void Log_In_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sign_Up_Link_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

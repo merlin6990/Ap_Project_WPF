@@ -34,3 +34,5 @@ E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Error.g.c
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Error.baml
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Order_Window.g.cs
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Add_Order_Window.baml
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Status_Comment.g.cs
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\obj\Debug\net6.0-windows\Status_Comment.baml

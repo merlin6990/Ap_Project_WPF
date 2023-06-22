@@ -93,7 +93,10 @@ namespace Wpf_Post_Office
 
         private void Exit_btn_Click(object sender, RoutedEventArgs e)
         {
-            //Going to The Log in Page NOT IMPLEMENTED YET
+            
+            Window_Log_In Login_Window = new Window_Log_In();
+            Login_Window.Show();
+            this.Close();
         }
 
         private void Customers_List_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -241,11 +244,24 @@ namespace Wpf_Post_Office
 
         private void Clear_Page_btn_Click(object sender, RoutedEventArgs e)
         {
-
+            Not_Found_Label2.Visibility = Visibility.Hidden;
+            Order_Info.Visibility = Visibility.Hidden;
+            Search_Box_ID2.Text = "";
         }
 
         private void Options_Page_btn_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var order = Data_Access_Unit.Show_Status(int.Parse(Search_Box_ID2.Text));
+                Status_Comment Pivot_Wind = new Status_Comment(order);
+                Pivot_Wind.ShowDialog();
+            }
+            catch(Exception This)
+            {
+                Error Temp_Error_Wind = new Error(This.Message);
+                Temp_Error_Wind.ShowDialog();
+            }
 
         }
     }

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Wpf_Post_Office.Status_Comment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Post_Office"
+        mc:Ignorable="d"
+        Title="Status_Comment" Height="600" Width="800">
+    <Grid Background="#14213d">
+        <StackPanel>
+            <Image Source="Resource/Logo.png" Width="250" Height="150" Margin="20"></Image>
+            <DockPanel>
+                <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Set Status :</Label>
+                <ComboBox Name="Status_Type_Cbox" IsReadOnly="False"  Width="200" HorizontalAlignment="Center" Height="20" Margin="0,0,20,0">
+                    <ComboBoxItem Background="Orange" Content="Registered"></ComboBoxItem>
+                    <ComboBoxItem Background="Orange" Content="Ready_To_Ship"></ComboBoxItem>
+                    <ComboBoxItem Background="Orange" Content="Shipped"></ComboBoxItem>
+                    <ComboBoxItem Background="Orange" Content="Received"></ComboBoxItem>
+                </ComboBox>
+                <Button Width="50" Height="20" Foreground="Black" Background="LightGreen" Click="Button_Click">Set</Button>
+                <Label Name="Status_Label" HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White" Content="Current Status :"></Label>
+                
+            </DockPanel>
+            <Label HorizontalAlignment="Center" Margin="22" FontSize="20" FontWeight="Bold" Foreground="White">Customer Comment</Label>
+            <TextBox Name="Comment_Text" Margin="20,20" Height="200" IsReadOnly="True" Background="#780000" Foreground="Black" FontSize="15" FontWeight="DemiBold" Text="" Visibility="Collapsed" ></TextBox>
+            <Label Name="No_Comment_Label" HorizontalAlignment="Center" Margin="22" FontSize="35" FontWeight="Bold" Foreground="Red">No Comments Yet</Label>
+        </StackPanel>
+        
+    </Grid>
+</Window>
