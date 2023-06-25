@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataAccess.Models;
+using DataAccess;
 
 namespace Wpf_Post_Office
 {
@@ -22,16 +24,48 @@ namespace Wpf_Post_Office
         public Window_Log_In()
         {
             InitializeComponent();
+            //Data_Access_Unit.Read_From_DB();
         }
 
         private void Log_In_btn_Click(object sender, RoutedEventArgs e)
         {
+            string Username = User_Name_Textbx.Text;
+            string Password = Password_Textbx.Text;
+            //Function that goes through all of the users if it throws an exception there will be a pop up that pass or username is wrong otherwise we construct a window with that users object
+            try
+            {
+                if (Data_Access_Unit.Log_IN_SearchC(Username, Password) != null)
+                {
+                    Window_Customer newwind = new Window_Customer(/*Data_Access_Unit.Log_IN_SearchC(Username, Password)*/);
+                    newwind.Show();
+                    this.Close();
+                }
+                else if (Data_Access_Unit.Log_IN_SearchU(Username, Password) != null)
+                {
+                    MainWindow Newwind=new MainWindow(Data_Access_Unit.Log_IN_SearchU(Username, Password));
+                    Newwind.Show();
+                    this.Close();
+                }
+                else
+                    throw new Exception("No user was found");
+                Not_Found_Label.Visibility = Visibility.Hidden;
+                this.Close();
 
+
+            }
+            catch(Exception This)
+            {
+                User_Name_Textbx.Text = "";
+                Password_Textbx.Text = "";
+                Not_Found_Label.Visibility = Visibility.Visible;
+            }
         }
 
         private void Sign_Up_Link_Click(object sender, RoutedEventArgs e)
         {
-
+            Window_Sign_Up Goto_Sign_Up=new Window_Sign_Up();
+            Goto_Sign_Up.Show();
+            this.Close();
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\App.xaml
-81234738675
+9945961843
 
-12106363259
+13-1357779432
 195-1633261148
-Add_Customer_Window.xaml;Add_Order_Window.xaml;Error.xaml;MainWindow.xaml;Status_Comment.xaml;Window_Customer.xaml;Window_Log_In.xaml;Window_Sign_Up.xaml;
+Add_Customer_Window.xaml;Add_Order_Window.xaml;Customer_Comment.xaml;Error.xaml;MainWindow.xaml;Status_Comment.xaml;Window_Customer.xaml;Window_Log_In.xaml;Window_Sign_Up.xaml;
 
 True
 

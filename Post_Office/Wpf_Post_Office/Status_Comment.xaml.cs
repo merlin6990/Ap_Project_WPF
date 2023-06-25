@@ -51,7 +51,12 @@ namespace Wpf_Post_Office
         {
             try
             {
-                This_Order_Point.Set_Status((Status)Status_Type_Cbox.SelectedIndex);
+                foreach(var i in Data_Access_Unit.Order_Buffer)
+                {
+                    if (This_Order_Point.Equals(i))
+                        i.Set_Status((Status)Status_Type_Cbox.SelectedIndex);
+                }
+                //This_Order_Point.Set_Status((Status)Status_Type_Cbox.SelectedIndex);
                 if((Status)Status_Type_Cbox.SelectedIndex==Status.Received)
                     Status_Type_Cbox.IsReadOnly = true;
                 Status_Label.Content = "Current Status :" + This_Order_Point._Status.ToString();

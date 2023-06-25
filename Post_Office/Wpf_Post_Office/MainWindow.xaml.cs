@@ -23,10 +23,11 @@ namespace Wpf_Post_Office
     
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        Employee This_Employee;
+        public MainWindow(Employee X)
         {
             InitializeComponent();
-            Data_Access_Unit.Read_From_DB();
+            This_Employee= X;
             Customers_List.ItemsSource = Data_Access_Unit.Customer_Buffer;
         }
 
@@ -200,9 +201,9 @@ namespace Wpf_Post_Office
                 }
                 if ((bool)Use_Weight.IsChecked)
                 {
-                    if (double.Parse(Dummy_Box3.Text) <= 0)
+                    if (double.Parse(Dummy_Box4.Text) <= 0)
                         throw new Exception("Weight cannot be zero or negative");
-                    Weight = double.Parse(Dummy_Box3.Text);
+                    Weight = double.Parse(Dummy_Box4.Text);
                 }
                 if ((bool)Use_Post_Type.IsChecked)
                 {

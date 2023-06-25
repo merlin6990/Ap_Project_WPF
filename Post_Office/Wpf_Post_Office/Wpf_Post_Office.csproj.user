@@ -13,6 +13,9 @@
     <Compile Update="Add_Order_Window.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Customer_Comment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Error.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Add_Order_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customer_Comment.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Error.xaml">

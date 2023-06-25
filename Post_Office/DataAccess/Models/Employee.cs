@@ -58,13 +58,15 @@ namespace DataAccess.Models
                 UserName = value;
             }
         }
-        private string _Password { set
+        public string _Password { set
             {
                 if (Validity.Password_Isvalid(value))
                     Password = value;
                 else
                     throw new Exception("Invalid pattern for password");
-            } }
+            }
+            get { return Password; }
+        }
         
         public Employee(string first_Name, string last_Name, string email, string iD, string userName, string password)
         {

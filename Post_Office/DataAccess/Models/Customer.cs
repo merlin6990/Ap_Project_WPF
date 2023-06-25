@@ -131,5 +131,9 @@ namespace DataAccess.Models
         {
             MyWallet.Withdraw(x);
         }
+        public string Get_Password()
+        {
+            return this.Password;
+        }
     }
 }

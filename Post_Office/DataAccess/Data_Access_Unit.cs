@@ -16,7 +16,8 @@ namespace DataAccess
         public static ObservableCollection<Order> Order_Buffer=new ObservableCollection<Order>();
         public static void Read_From_DB()
         {
-            Customer me = new Customer("Ali", "Momen", "aalimomen110@gmail.com", "0025445782", "09120133780");
+            Customer me = new Customer("Ali", "Momen", "aalimomen110@gmail.com", "0025445782", "09120133780","Aliamir110","black");
+
             Customer_Buffer.Add(me);
         }
         ////////////////
@@ -24,6 +25,10 @@ namespace DataAccess
         {
             Customer New_Customer = new Customer(firstname, lastname, email, ssn, phone_number);
             Customer_Buffer.Add(New_Customer);
+        }
+        public static void Add_New_Emp(Employee NEW)
+        {
+            Employees_Buffer.Add(NEW);
         }
         public static void Add_New_Order(string SSN, string sender, string receiver, Box_Content x, bool isexpensive, double weight, Post_Type type,string Phone_Num="")
         {
@@ -89,6 +94,28 @@ namespace DataAccess
             }
 
             return Filtered_orders;
+        }
+        public static Customer Log_IN_SearchC(string user,string pass)
+        {
+            foreach(var i in Customer_Buffer)
+            {
+                if ((user == i._User_Name) && (pass == i.Get_Password()))
+                    return i;
+            }
+            return null;
+        }
+        public static Employee Log_IN_SearchU(string user, string pass)
+        {
+            foreach (var i in Employees_Buffer)
+            {
+                if ((user == i._UserName) && (pass == i._Password))
+                    return i;
+            }
+            return null;
+        }
+        public static void Set_Comment(Order x,string comment)
+        {
+            x.Customer_Comment = comment;
         }
     }
 }

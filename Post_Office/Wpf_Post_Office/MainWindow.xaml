@@ -108,7 +108,7 @@
 
 
         </Border>
-        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch" Visibility="Visible">
+        <Border  Grid.Column="1" Margin="0"  Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch" Visibility="Collapsed">
             <StackPanel >
                 <DockPanel>
                     <Label Foreground="White" Margin="20,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center">Order ID</Label>
