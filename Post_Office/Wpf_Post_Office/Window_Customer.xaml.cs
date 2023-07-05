@@ -21,11 +21,18 @@ namespace Wpf_Post_Office
     public partial class Window_Customer : Window
     {
         Customer This_Customer;
-        public Window_Customer(/*Customer X*/)
+        public Window_Customer(Customer X)
         {
             InitializeComponent();
-            Data_Access_Unit.Read_From_DB();
-            This_Customer = Data_Access_Unit.Customer_Buffer[0];
+/*            try
+            {
+                Data_Access_Unit.Read_From_DB();
+            }
+            catch(Exception This)
+            {
+                MessageBox.Show(This.Message);
+            }*/
+            This_Customer = X;
         }
         private void Home_btn_Click(object sender, RoutedEventArgs e)
         {
@@ -203,6 +210,45 @@ namespace Wpf_Post_Office
                 Temp_Error_Wind.ShowDialog();
             }
 
+        }
+
+        private void Refresh_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Balance_Label.Content=This_Customer.Get_My_Blance().ToString()+" $";
+        }
+
+        private void Charge_btn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Data_Access_Unit.Charge_Account(This_Customer, Card_Number_Block.Text, Year_Number_Block.Text, Month_Number_Block.Text, CVV2_Number_Block.Text, Money_Number_Block.Text);
+                Card_Number_Block.Text = "";
+                Year_Number_Block.Text = "";
+                Month_Number_Block.Text = "";
+                CVV2_Number_Block.Text = "";
+                Money_Number_Block.Text = "";
+            }
+            catch(Exception This)
+            {
+                Error Temp_Error_Wind = new Error(This.Message);
+                Temp_Error_Wind.ShowDialog();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Data_Access_Unit.Change_Info_2(This_Customer,New_Username_Block.Text, New_Password_Block.Text);
+                New_Username_Block.Text = "";
+                New_Password_Block.Text = "";
+                MessageBox.Show("Your Info was changed successfuly");
+            }
+            catch(Exception This)
+            {
+                Error Temp_Error_Wind = new Error(This.Message);
+                Temp_Error_Wind.ShowDialog();
+            }
         }
     }
 }

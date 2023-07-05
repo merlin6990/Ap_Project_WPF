@@ -21,10 +21,16 @@ namespace Wpf_Post_Office
     /// </summary>
     public partial class Window_Log_In : Window
     {
+        public static int App_Awaken = 0;
         public Window_Log_In()
         {
             InitializeComponent();
-            //Data_Access_Unit.Read_From_DB();
+            if(App_Awaken == 0)
+            {
+                App_Awaken = 1;
+                Data_Access_Unit.Read_From_DB();
+            }
+            
         }
 
         private void Log_In_btn_Click(object sender, RoutedEventArgs e)
@@ -36,7 +42,7 @@ namespace Wpf_Post_Office
             {
                 if (Data_Access_Unit.Log_IN_SearchC(Username, Password) != null)
                 {
-                    Window_Customer newwind = new Window_Customer(/*Data_Access_Unit.Log_IN_SearchC(Username, Password)*/);
+                    Window_Customer newwind = new Window_Customer(Data_Access_Unit.Log_IN_SearchC(Username, Password));
                     newwind.Show();
                     this.Close();
                 }

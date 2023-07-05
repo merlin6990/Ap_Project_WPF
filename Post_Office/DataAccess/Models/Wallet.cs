@@ -27,5 +27,9 @@ namespace DataAccess.Models
         {
             Balance -= x;
         }
+        public void set(int x)
+        {
+            Balance = x;
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace DataAccess.Models
     public class Customer
     {
         private ObservableCollection<Order> My_Orders = new ObservableCollection<Order>();
-        private static int Customers_Num = 0;
+        private static int Customers_Num = Data_Access_Unit.Customer_Buffer.Count+1;
         private string First_Name = "", Last_Name = "", Email = "";
         private string SSN="",Phone_Number="";
         private string User_Name="", Password="";
@@ -35,7 +35,7 @@ namespace DataAccess.Models
                 if (Validity.Name_Isvalid(value))
                     Last_Name = value;
                 else
-                    throw new Exception("Invalid pattern for LastName");
+                    throw new Exception("Invalid pattern for Last Name");
 
             }
         }
@@ -47,7 +47,7 @@ namespace DataAccess.Models
                 if (Validity.Email_Isvalid(value))
                     Email = value;
                 else
-                    throw new Exception("Invalid pattern for Email");
+                    throw new Exception("Invalid pattern for Email") ;
             }
         }
         public string _SSN
@@ -134,6 +134,23 @@ namespace DataAccess.Models
         public string Get_Password()
         {
             return this.Password;
+        }
+        public void Charge_Wallet(int money)
+        {
+            MyWallet.Add_Money(money);
+        }
+        public void Set(int x)
+        {
+            MyWallet.set(x);
+        }
+        public void Change_Info(string User,string Pass)
+        {
+            if (!Validity.Password_Isvalid(Pass))
+                throw new Exception("Invalid Password");
+            else if (!Validity.UserName_Isvalid(User))
+                throw new Exception("Invalid UserName");
+            this.Password = Pass;
+            this.User_Name = User;
         }
     }
 }

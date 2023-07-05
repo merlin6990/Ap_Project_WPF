@@ -79,7 +79,7 @@ namespace DataAccess.Models
         {
             get { return Box_Weight; }
         }
-        public Order(string SSN,string sender,string receiver,Box_Content x,bool isexpensive,double weight,Post_Type type, string Phone_Num = "")
+        public Order(string SSN,string sender,string receiver,Box_Content x,bool isexpensive,double weight,Post_Type type, string Phone_Num = "",string ID_Read="",Status This=Status.Registered)
         {
             if (weight <= 0)
                 throw new ArgumentException("Weight of the box cannot be Negative or 0");
@@ -90,10 +90,18 @@ namespace DataAccess.Models
             Content_Isexpensive = isexpensive;
             Box_Weight = weight;
             Type = type;
-            ID= ID_num+1;
+            if (ID_Read == "")
+                ID = ID_num + 1;
+            else
+            {
+                ID = int.Parse(ID_Read);
+                ID_num = ID;
+            }
             ID_num++;
             if (Phone_Num != "")
                 Additional_Phone_Num = Phone_Num;
+            This_Order_Status = This;
+            This_Order_Price = (int)Calculate_Price(x, isexpensive, weight, type);
 
         }
         public static double Calculate_Price(Box_Content x, bool isexpensive, double weight, Post_Type type)

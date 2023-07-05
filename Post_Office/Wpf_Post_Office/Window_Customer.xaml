@@ -82,7 +82,7 @@
         
         
         
-        <Border  Grid.Column="1" Margin="0" Visibility="Visible" Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch">
+        <Border  Grid.Column="1" Margin="0" Visibility="Collapsed" Background="#1b263b" Width="auto" Name="Order_Info_Panel" HorizontalAlignment="Stretch">
             <StackPanel >
                 <DockPanel>
                     <Label Foreground="White" Margin="20,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center">Order ID</Label>
@@ -110,10 +110,52 @@
 
         </Border>
         <Border  Grid.Column="1" Margin="0" Visibility="Collapsed" Background="#1b263b" Width="auto" Name="My_Wallet_Panel" HorizontalAlignment="Stretch">
+            <StackPanel >
+                <DockPanel>
+                    <Label Foreground="White" Margin="80,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="35" VerticalAlignment="Center">Your Card's Balance :</Label>
+                    <Label Name="Balance_Label" Foreground="Green" Margin="20,30,20,5" FontWeight="Heavy" FontFamily="Times New Roman" HorizontalAlignment="Left" FontSize="35" VerticalAlignment="Center"></Label>
+                </DockPanel>
+                <Button Name="Refresh_btn" Width="200" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Orange" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Refresh_btn_Click">
+                    Refresh
+                </Button>
+                <DockPanel>
+                    <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Card Number</Label>
+                    <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Card_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,0" Width="978">
+                    <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Card Date</Label>
+                    <Label HorizontalAlignment="Left" Margin="350,0,0,0" FontSize="15" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="White">Year</Label>
+                    <TextBox Margin="10,0,0,0" HorizontalAlignment="Right" Width="150" Height="20" Name="Year_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                    <Label HorizontalAlignment="Left" Margin="20,0,0,0" FontSize="15" VerticalAlignment="Center" FontWeight="Bold" Foreground="White">Month</Label>
+                    <TextBox Margin="0,0,70,0" HorizontalAlignment="Right" Width="150" Height="20" Name="Month_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                </DockPanel>
+                <DockPanel>
+                    <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">CVV2</Label>
+                    <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="CVV2_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                </DockPanel>
+                <DockPanel>
+                    <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">Charge Amount</Label>
+                    <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="Money_Number_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                </DockPanel>
 
+                <Button Name="Charge_btn" Width="200" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#70e000" Margin="100,70,100,100" Foreground="#14213d" FontSize="20" FontFamily="Times New Roman" Height="50" Click="Charge_btn_Click">
+                    Charge
+                </Button>
+            </StackPanel>
         </Border>
         <Border  Grid.Column="1" Margin="0" Visibility="Collapsed" Background="#1b263b" Width="auto" Name="Edit_Info_Panel" HorizontalAlignment="Stretch">
-
+            <StackPanel>
+                <Label FontSize="45" HorizontalAlignment="Center" Margin="0,20" FontWeight="Heavy" FontFamily="Times New Roman" Foreground="Beige">Change Info</Label>
+                <DockPanel>
+                    <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">New Username :</Label>
+                    <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="New_Username_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                </DockPanel>
+                <DockPanel>
+                    <Label HorizontalAlignment="Left" Margin="22" FontSize="15" FontWeight="Bold" Foreground="White">New Password :</Label>
+                    <TextBox Margin="20" HorizontalAlignment="Right" Width="500" Height="20" Name="New_Password_Block" Background="#780000" BorderBrush="#780000" Foreground="White" FontSize="12"></TextBox>
+                </DockPanel>
+                <Button Margin="50" Width="400" HorizontalAlignment="Center" Height="30" Background="Orange" Click="Button_Click">Change</Button>
+            </StackPanel>
         </Border>
 
 

@@ -30,7 +30,24 @@ namespace Wpf_Post_Office
 
         private void Send_btn_Click(object sender, RoutedEventArgs e)
         {
-            This_Order.Customer_Comment = Search_Box_ID2.Text;
+            /*            if(This_Order._Status==Status.Received)
+                            This_Order.Customer_Comment = Search_Box_ID2.Text;
+                        else
+                        {
+                            Send_btn.Visibility = Visibility.Hidden;
+                            Search_Box_ID2.Visibility = Visibility.Hidden;
+                        }*/
+
+            try
+            {
+                if (Search_Box_ID2.Text == "")
+                    throw new Exception("Comment cannot be empty");
+                Data_Access_Unit.Set_Comment(This_Order, Search_Box_ID2.Text);
+            }
+            catch(Exception This)
+            {
+                MessageBox.Show(This.Message);
+            }
         }
     }
 }

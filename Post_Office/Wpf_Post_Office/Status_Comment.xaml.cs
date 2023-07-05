@@ -54,7 +54,10 @@ namespace Wpf_Post_Office
                 foreach(var i in Data_Access_Unit.Order_Buffer)
                 {
                     if (This_Order_Point.Equals(i))
+                    {
                         i.Set_Status((Status)Status_Type_Cbox.SelectedIndex);
+                        Data_Access_Unit.Change_Status(i, (Status)Status_Type_Cbox.SelectedIndex);
+                    }
                 }
                 //This_Order_Point.Set_Status((Status)Status_Type_Cbox.SelectedIndex);
                 if((Status)Status_Type_Cbox.SelectedIndex==Status.Received)
