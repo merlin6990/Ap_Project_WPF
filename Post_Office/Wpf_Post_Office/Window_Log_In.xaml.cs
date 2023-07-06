@@ -25,10 +25,17 @@ namespace Wpf_Post_Office
         public Window_Log_In()
         {
             InitializeComponent();
-            if(App_Awaken == 0)
+            try
             {
-                App_Awaken = 1;
-                Data_Access_Unit.Read_From_DB();
+                if (App_Awaken == 0)
+                {
+                    App_Awaken = 1;
+                    Data_Access_Unit.Read_From_DB();
+                }
+            }
+            catch(Exception This)
+            {
+                MessageBox.Show(This.Message);
             }
             
         }

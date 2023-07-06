@@ -221,7 +221,7 @@ namespace Wpf_Post_Office
         {
             try
             {
-                Data_Access_Unit.Charge_Account(This_Customer, Card_Number_Block.Text, Year_Number_Block.Text, Month_Number_Block.Text, CVV2_Number_Block.Text, Money_Number_Block.Text);
+                Data_Access_Unit.Charge_Account(This_Customer, Card_Number_Block.Text, Year_Number_Block.Text, Month_Number_Block.Text, CVV2_Number_Block.Text, Money_Number_Block.Text,true);
                 Card_Number_Block.Text = "";
                 Year_Number_Block.Text = "";
                 Month_Number_Block.Text = "";

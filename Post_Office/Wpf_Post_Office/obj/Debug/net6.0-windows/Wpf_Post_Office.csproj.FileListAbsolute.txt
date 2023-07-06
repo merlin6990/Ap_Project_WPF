@@ -44,3 +44,6 @@ E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\runtimes\
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\Reports\Report.csv
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+E:\Ap_Project_WPF\Post_Office\Wpf_Post_Office\bin\Debug\net6.0-windows\itextsharp.dll

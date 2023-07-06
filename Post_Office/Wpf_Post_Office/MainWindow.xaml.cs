@@ -212,7 +212,7 @@ namespace Wpf_Post_Office
                     Type = (Post_Type)Dummy_Box5.SelectedIndex;
                 }
 
-                var Result = Data_Access_Unit.Filtered_Orders((bool)Use_SSN.IsChecked, (bool)Use_Box_Type.IsChecked, (bool)Use_Price.IsChecked, (bool)Use_Weight.IsChecked, (bool)Use_Post_Type.IsChecked, SSN, Content, Price, Weight, Type);
+                var Result = Data_Access_Unit.Filtered_Orders((bool)Use_SSN.IsChecked, (bool)Use_Box_Type.IsChecked, (bool)Use_Price.IsChecked, (bool)Use_Weight.IsChecked, (bool)Use_Post_Type.IsChecked, SSN, Content, Price, Weight, Type,true);
 
                 Search_Result.ItemsSource = Result;
                 Search_Result.Visibility = Visibility.Visible;

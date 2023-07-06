@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,19 +9,24 @@
   <ItemGroup>
     <None Remove="DB\Post_Office_db.mdf" />
     <None Remove="DB\Post_Office_db_log.ldf" />
+    <None Remove="Reports\Report.csv" />
+    <None Remove="Reports\Reports.csv.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Reports\Report.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="DB\Post_Office_db.mdf" />
     <Resource Include="DB\Post_Office_db_log.ldf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Reports\" />
   </ItemGroup>
 
 </Project>

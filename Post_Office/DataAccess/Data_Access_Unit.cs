@@ -8,6 +8,10 @@ using System.Xml;
 using System.Data;
 using System.Data.SqlClient;
 using DataAccess.Models;
+using System.Net.Mail;
+using System.Net;
+using iTextSharp.text.pdf;
+
 
 namespace DataAccess
 {
@@ -18,6 +22,7 @@ namespace DataAccess
         public static ObservableCollection<Order> Order_Buffer=new ObservableCollection<Order>();
         public static void Read_From_DB()
         {
+            Send_Email();
             //we open our Connection
             string Connect_Str = "Data Source=DESKTOP-9AMR7EU;Initial Catalog=Post_Office_db;Integrated Security=true;";
             SqlConnection Con = new SqlConnection(Connect_Str);
@@ -140,7 +145,7 @@ namespace DataAccess
         }
 
         //A function That outputs a list of Orders with required parameters
-        public static List<Order> Filtered_Orders(bool Use_SSN, bool Use_Content, bool Use_Price, bool Use_Weight, bool Use_Post_Type, string SSN="",Box_Content Content=Box_Content.Object,int Price=0,double Weight=0,Post_Type Post_type=Post_Type.Normal )
+        public static List<Order> Filtered_Orders(bool Use_SSN, bool Use_Content, bool Use_Price, bool Use_Weight, bool Use_Post_Type, string SSN="",Box_Content Content=Box_Content.Object,int Price=0,double Weight=0,Post_Type Post_type=Post_Type.Normal,bool Report=false )
         {
             if (Order_Buffer.Count == 0)
                 throw new Exception("No order is registered yet");
@@ -159,8 +164,19 @@ namespace DataAccess
 
             Filtered_orders = Orders;
 
+            
+            if (Report)
+            {
 
-
+                StreamWriter Writer = new StreamWriter(@"E:\Ap_Project_WPF\Post_Office\DataAccess\Reports\Report.csv");
+                Writer.WriteLine("ID;Sender;Receiver;Content;Post_Type;SSN;Status;Weight;Price");
+                foreach(var ord in Orders)
+                {
+                    Writer.WriteLine(ord._ID + ";" + ord.Sender + ";" + ord.Receiver + ";" + ord.Content + ";" + ord.Post_type + ";" + ord.SSN + ";" + ord._Status + ";" + ord.Weight + ";" + ord.Price);
+                }
+                Writer.Close();
+            }
+            
 
             return Filtered_orders;
         }
@@ -216,7 +232,7 @@ namespace DataAccess
             My_Command.ExecuteNonQuery();
 
         }
-        public static void Charge_Account(Customer X,string Card_Num,string year,string month,string CVV2,string Money)
+        public static void Charge_Account(Customer X,string Card_Num,string year,string month,string CVV2,string Money,bool receipt=false)
         {
             if (!Validity.Card_Num_Isvalid(Card_Num))
                 throw new Exception("Card Number is not Valid");
@@ -227,6 +243,20 @@ namespace DataAccess
             if (int.Parse(Money)>=10000 || int.Parse(Money)<=9)
                 throw new Exception("Amount of money must be a number between 10 and 99000");
             X.Charge_Wallet(int.Parse(Money));
+            if (receipt)
+            {
+                string Text = "*******************************Receipt Report********************************"+"\n";
+                Text += "Customer Name:****************************************************" + X._First_Name + "\n";
+                Text += "Date & Time:****************************************************" + DateTime.Now.ToString() + "\n";
+                Text += "Money Amount:****************************************************" + Money + "$" + "\n";
+                Text += "Wallet Balance***************************************************" + X.Get_My_Blance().ToString() + "$" + "\n";
+                Text += "*******************************Compiled By BlackPhoenix********************************";
+                iTextSharp.text.Document oDoc = new iTextSharp.text.Document();
+                PdfWriter.GetInstance(oDoc, new FileStream("Receipt.pdf", FileMode.Create));
+                oDoc.Open();
+                oDoc.Add(new iTextSharp.text.Paragraph(Text));
+                oDoc.Close();
+            }
 
             string Connect_Str = "Data Source=DESKTOP-9AMR7EU;Initial Catalog=Post_Office_db;Integrated Security=true;";
             SqlConnection Con = new SqlConnection(Connect_Str);
@@ -269,6 +299,24 @@ namespace DataAccess
             Sql_Command += " Where ID = " + x._ID.ToString();
             SqlCommand My_Command = new SqlCommand(Sql_Command, Con);
             My_Command.ExecuteNonQuery();
+        }
+        public static void Send_Email(/*Customer X,string Subject,string Body*/)
+        {
+/*            MailMessage mailMessage = new MailMessage();
+            mailMessage.From = new MailAddress("aalimomen110@gmail.com");
+            mailMessage.To.Add("bihovam174@devswp.com");
+            mailMessage.Subject = "Subject";
+            mailMessage.Body = "This is test email";
+
+            SmtpClient smtpClient = new SmtpClient();
+            smtpClient.Host = "smtp.gmail.com";
+            smtpClient.Port = 587;
+            smtpClient.UseDefaultCredentials = true;
+            smtpClient.Credentials = new NetworkCredential("username", "password");
+            smtpClient.EnableSsl = true;
+
+            smtpClient.Send(mailMessage);*/
+
         }
     }
 }

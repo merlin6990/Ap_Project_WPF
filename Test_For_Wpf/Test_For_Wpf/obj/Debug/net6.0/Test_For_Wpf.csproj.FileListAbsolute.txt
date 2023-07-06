@@ -20,3 +20,13 @@ E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\runtimes\win-x86\na
 E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\obj\Debug\net6.0\Test_For_Wpf.csproj.CopyComplete
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\PdfSharp.Charting.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\PdfSharp.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\System.Drawing.Common.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\de\PdfSharp.Charting.resources.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\de\PdfSharp.resources.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+E:\Ap_Project_WPF\Test_For_Wpf\Test_For_Wpf\bin\Debug\net6.0\itextsharp.dll
